@@ -4,7 +4,7 @@ import db from "./utils/database.js";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import todos from "./models/todos.models.js";
-
+import cors from 'cors'
 const PORT = 3000;
 todos;
 
@@ -20,7 +20,7 @@ db.sync()
 const app = express();
 
 app.use(express.static('../cliente'));
-
+app.use(cors());
 // Manejo de rutas para servir la aplicación React
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../cliente', 'index.html'));

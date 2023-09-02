@@ -4,7 +4,7 @@ const useFetch = () => {
     
     const todos = () => {
         axios   
-          .get(" http://localhost:3000/todos ")
+          .get(" https://tareas1.onrender.com/todos ")
           .then((response) => {
               console.log(response.data);
             })
@@ -15,7 +15,7 @@ const useFetch = () => {
     }
     const post = data => {
         axios
-            .post("http://localhost:3000/todos", data)
+            .post("https://tareas1.onrender.com:5431/todos", data)
             .then((response) => {
               console.log(response.data);
             })
