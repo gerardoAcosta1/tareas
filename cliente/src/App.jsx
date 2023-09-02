@@ -10,11 +10,11 @@ function App() {
   useEffect(()=>{
     const {todos, post} = useFetch()
     todos()
-    post({
+    /*post({
       title: 'uno',
       description: 'tarea1',
       completed: true
-    })
+    })*/
     
     
   },[])
