@@ -44,7 +44,7 @@ app.get('/todos', async (req, res) => {
     }catch (err)
 
     {
-        res.status(201).json({err: 'ocurrió un error'});
+        res.status(201).json(err);
         console.log(err);
     }
 })
