@@ -19,11 +19,11 @@ db.sync()
 
 const app = express();
 
-app.use(express.static('../cliente'));
+app.use(express.static('./cliente/dist/'));
 app.use(cors());
 // Manejo de rutas para servir la aplicación React
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../cliente', 'index.html'));
+  res.sendFile(path.join(__dirname, './cliente/dist/', 'index.html'));
 });
 app.use(express.json());
 
