@@ -16,8 +16,8 @@ const useFetch = () => {
     const post = data => {
         axios
             .post("https://tareas1.onrender.com/todos", data)
-            .then((response) => {
-              console.log(response.data);
+            .then((res) => {
+              console.log(res.data);
             })
             .catch((error) => {
               console.log(error);
